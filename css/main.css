@@ -1,0 +1,608 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN RESET xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN RESET xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+/*xxxxxxxxxxxx GLOBAL xxxxxxxxxxxxxx */
+
+body {/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cddbe6+0,5c6d75+100 */
+	background: #cddbe6; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #cddbe6 0%, #5c6d75 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #cddbe6 0%,#5c6d75 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #cddbe6 0%,#5c6d75 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cddbe6', endColorstr='#5c6d75',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+
+header nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 3px 0 20px grey;
+	font-family: orbitron;
+	font-size: 1.4em;
+	text-shadow: 1px 1px 1px black;
+	}
+
+a {  
+	text-decoration: none;
+	color: white; 
+	font-family: orbitron;
+	}
+
+nav a {
+	text-decoration: none;
+	margin: 1%;
+	color: white;
+ 	}
+
+nav h1 { 
+	text-align: center; }
+
+
+section { 
+	width: 75%; 
+	margin: 40px auto;
+	font-family: orbitron;
+	}
+
+h2 { 
+	font-family: merriweather sans;
+	font-size: 2em;
+	text-transform: uppercase;
+	color: white;
+	margin: 50px 0 50px 0;
+	padding: 30px;
+	border-top: 2px solid #98a6af;
+	border-left: 2px solid #98a6af;
+	width: 100%;
+	}
+
+section + section { 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+/*xxxxxxxxxxxx FIN GLOBAL xxxxxxxxxxxxxx */
+
+/*xxxxxxxxxxxx HEADER xxxxxxxxxxxxxxxx */
+
+header nav a:nth-of-type(1) { margin-right: 0; }
+
+figure { 
+	text-align: center;
+}
+
+figure img { 
+	width: 50%; 
+}
+
+h1, figcaption { 
+	font-size: 0.5em;
+	color: black;
+ }
+
+
+					 /*xxxxxxxxxx BURGER xxxxxxxxxxx */
+
+						* {
+						  font-family: 'helvetica nue', sans-serif;
+						  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+						  -webkit-tap-highlight-color: transparent;
+						  /* For some Androids */
+						}
+
+						.top-animate {
+						  background: #fff !important;
+						  top: 13px !important;
+						  -webkit-transform: rotate(45deg);
+						  transform: rotate(45deg);
+						}
+
+						.mid-animate {
+						  opacity: 0;
+						}
+
+						.bottom-animate {
+						  background: #fff !important;
+						  top: 13px !important;
+						  -webkit-transform: rotate(-225deg);
+						  transform: rotate(-225deg);
+						}
+
+						.top-menu {
+						  top: 0;
+						  width: 40px;
+						  height: 4px;
+						  border-radius: 10px;
+						  background-color: #c30044;
+						}
+
+						.mid-menu {
+						  top: 13px;
+						  width: 40px;
+						  height: 4px;
+						  border-radius: 10px;
+						  background-color: #c30044;
+						}
+
+						.bottom-menu {
+						  top: 26px;
+						  width: 40px;
+						  height: 4px;
+						  border-radius: 10px;
+						  background-color: #c30044;
+						}
+
+						.menui {
+						  background: #c30044;
+						  transition: 0.6s ease;
+						  transition-timing-function: cubic-bezier(.75, 0, .29, 1.01);
+						  margin-top: 20px;
+						  position: absolute;
+						}
+
+						.icon {
+						  z-index: 999;
+						  position: fixed;
+						  display: block;
+						  padding: 9px;
+						  height: 32px;
+						  width: 32px;
+						  margin: 0px;
+						  top: 1%;
+						  left: 2%;
+						}
+
+						.mobilenav {
+						  font-family: inherit;
+						  top: 0;
+						  left: 0;
+						  z-index: 999;
+						  display: none;
+						  position: fixed;
+						  width: 100%;
+						  height: 100%;
+						  background: #c30044;
+						}
+
+						.mobilenav li {
+						  list-style-type: none;
+						  text-align: center;
+						  padding: 10px;
+						  margin-bottom: 30px;
+						}
+
+						.mobilenav li a {
+						  font-size: 200%;
+						  color: #fff;
+						  text-decoration: none;
+						  font-weight: 300;
+						  width: 100%;
+						}
+
+						.mobilenav li:first-child {
+						  margin-top: 60px;
+
+						}
+
+					 /*xxxxxxxxxx BURGER xxxxxxxxxxx */
+
+.burger { display: none; }
+
+/*xxxxxxxxxxxx FIN HEADER xxxxxxxxxxxxxx */
+
+/*xxxxxxxxxxxx MAIN xxxxxxxxxxxxxxxx*/
+
+.flex-direction-nav { display: none; }
+
+.flex-control-nav li a.flex-active { background: #c30044; }
+
+.slides { 
+	width: 99%;
+	margin: 0.5% auto;
+}
+
+
+
+section:nth-of-type(2) article { 
+	width: 23%;
+	text-align: center;
+	background: white;
+	padding-bottom: 40px;
+	}
+
+section:nth-of-type(2) article img { 
+	width: 80%;
+	margin-top: 10%;	
+	}
+
+section:nth-of-type(2) article figcaption { 
+	color: #c30044;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 1.8em;
+	padding-bottom: 5%;
+	border-bottom: #c30044 2px solid;
+	}
+
+section:nth-of-type(2) article p { 
+	margin: 10% auto;
+	width: 80%;
+	line-height: 200%;
+ }
+
+section:nth-of-type(2) article a { 
+	background: #c30044;
+	display: block;
+	width: 80%;
+	padding: 7%;
+	margin: 0 auto;
+	}
+
+section:nth-of-type(3) { 
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	line-height: 200%;
+	margin-bottom: 0;
+  }
+
+
+video { 
+	width: 49%; 
+			}
+
+section:nth-of-type(3) article {
+	color: white;
+	width: 49%; 
+	font-size: 1em;
+	}
+
+section:nth-of-type(3) article p { 
+	margin-bottom: 20px;
+ }
+
+section:nth-of-type(4) { 
+	margin-top: 0;
+	margin-bottom: 0;
+ }
+
+form { 
+	width: 100%;
+	align-items: center;
+ } 
+
+label { 
+	color: white;
+ }
+
+#newsletter {
+	width: 80%;
+	margin: 2%;
+	padding: 1.5%;
+	background: #d8dcdf;
+	border: none;
+	border-radius: 5px;
+}
+
+#newsletter:focus { 
+	outline: none;
+	background: white;
+ }
+
+#envoyer { 
+	width: 14%; 
+	padding: 1.3%;
+	background: #cedce7;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.2em;
+}
+
+iframe { 
+	width: 100%;
+	margin-bottom: 2%;
+ }
+
+			 /*xxxxxxxxxxx ACCORDEON xxxxxxxxxxxxxxx*/
+
+			@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:700);
+
+			.container h3 {
+			  color: #c30044;
+			  font-family: 'Josefin Sans', Arial, sans-serif;
+			  font-size: 1.8em;
+			  letter-spacing: 1px;
+			  margin: 0;
+			  text-transform: uppercase;
+			  border: none;
+			}
+
+			.container p {
+			  color: #666666;
+			  font-family: orbitron;
+			  font-size: 1em;
+			  line-height: 1.5;
+			  margin: 4%;
+			  padding: 10px;
+			}
+
+			.container {
+			  max-width: 75%;
+			  margin: 0 auto;
+			}
+
+			.acc {
+			  margin: 90px 0;
+			  overflow: hidden;
+			  padding: 0;
+			}
+
+			.acc li {
+			  list-style-type: none;
+			  padding: 0;
+			}
+
+			.acc_ctrl {
+			  background: #FFFFFF;
+			  border: none;
+			  border-bottom: solid 1px #F2F2F2;
+			  cursor: pointer;
+			  display: block;
+			  outline: none;
+			  padding: 2em;
+			  position: relative;
+			  text-align: center;
+			  width: 100%;
+			}
+
+			.acc_ctrl:before {
+			  background: #c30044;
+			  content: '';
+			  height: 2px;
+			  margin-right: 5%;
+			  position: absolute;
+			  right: 0;
+			  top: 50%;
+			  -webkit-transform: rotate(90deg);
+			  -moz-transform: rotate(90deg);
+			  -ms-transform: rotate(90deg);
+			  -o-transform: rotate(90deg);
+			  transform: rotate(90deg);
+			  -webkit-transition: all 0.2s ease-in-out;
+			  -moz-transition: all 0.2s ease-in-out;
+			  -ms-transition: all 0.2s ease-in-out;
+			  -o-transition: all 0.2s ease-in-out;
+			  transition: all 0.2s ease-in-out;
+			  width: 2%;
+			}
+
+			.acc_ctrl:after {
+			  background: #c30044;
+			  content: '';
+			  height: 2px;
+			  margin-right: 5%;
+			  position: absolute;
+			  right: 0;
+			  top: 50%;
+			  width: 2%;
+			}
+
+			.acc_ctrl.active:before {
+			  -webkit-transform: rotate(0deg);
+			  -moz-transform: rotate(0deg);
+			  -ms-transform: rotate(0deg);
+			  -o-transform: rotate(0deg);
+			  transform: rotate(0deg);
+			}
+
+			.acc_ctrl.active h3, .acc_ctrl:focus h3 {
+			  position: relative;
+			}
+
+			.acc_panel {
+			  background: #F2F2F2;
+			  display: none;
+			  overflow: hidden;
+			}
+
+			.container a { 
+					background: #c30044;
+				display: block;
+				width: 16%;
+				padding: 1%;
+				margin: 20px auto;
+				text-align: center;
+				font-size: 1em;
+				font-family:'Josefin Sans', Arial, sans-serif;
+			 }
+
+			.container img { 
+				width: 30%; 
+				text-align: center;
+				display: block;
+				margin: 20px auto;
+			}
+
+			/*xxxxxxxxxxx ACCORDEON xxxxxxxxxxxxxxx*/
+
+.container { display: none; }
+
+/*xxxxxxxxxxx FIN MAIN xxxxxxxxxxxxxxxxx*/
+
+/*xxxxxxxxxxx FOOTER xxxxxxxxxxxxxxx*/
+
+footer nav a { 
+	text-decoration: underline;
+ }
+
+footer { 
+	padding-top: 80px;
+	box-shadow: -3px 0 20px black;
+	text-align: center;	
+	padding-bottom: 5px;
+	}
+
+footer nav { 
+	margin-bottom: 60px;
+}
+
+small { 
+	color: lightgrey;
+	font-family: orbitron;
+	font-size: 0.8em;
+
+ }
+
+/*xxxxxxxxxxx FIN FOOTER xxxxxxxxxxxxxxx*/
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN CSS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx FIN CSS xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+@media screen and (max-width : 1448px) {
+	section:nth-of-type(3) article { font-size: 0.9em; }
+}
+
+@media screen and (max-width : 1393px) {
+	section:nth-of-type(3) article { 
+		font-size: 0.8em; 
+	}
+	section:nth-of-type(4) { 
+	margin-top: 20px;
+ }
+}
+
+@media screen and (max-width : 1245px) {
+	section + section { 
+		font-size: 0.9em; 
+	}
+	section:nth-of-type(3) { 
+		display: block; 
+		font-size: 1.2em;
+	}
+
+	form { text-align: center;
+		font-size: 1.2em; 
+	}
+
+	#envoyer { 
+		display: block;
+		margin: 15px auto;
+	 }
+
+	section:nth-of-type(3) article, video {
+		width: 100%;
+	}
+
+	section:nth-of-type(3) h2 {
+		font-size: 1.7em;
+	}
+}
+
+@media screen and (max-width : 1119px) {
+	section:nth-of-type(2) { 
+		display: none; 
+	}
+	.container { display: block; }
+
+}
+
+@media screen and (max-width : 979px) { 
+		header nav{ 
+		display: none;
+	}
+	.burger{ 
+		display: inline-block;
+	} 
+	section:nth-of-type(1) { 
+		margin-top: 100px; 
+	}
+	#envoyer { 
+		font-size: 1em; 
+		width: 20%;
+	}
+}
+
+@media screen and (max-width : 700px) {
+	.container p { 
+		font-size: 0.9em; 
+	}
+	#envoyer { 
+		width: 30%;
+	}
+}
+}
+
+@media screen and (max-width : 675px) {
+	.top-menu, .mid-menu, .bottom-menu {
+		width: 30px;
+	}
+	.mid-menu {
+		top : 9px;
+	}
+	.bottom-menu {
+		top: 18px;
+	}
+	h2 { font-size: 1.5em; }
+	section:nth-of-type(3) h2 { font-size: 1.2em; }
+}
+
+@media screen and (max-width : 675px) {
+	.top-menu, .mid-menu, .bottom-menu {
+		width: 25px;
+	}
